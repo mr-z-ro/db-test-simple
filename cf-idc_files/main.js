@@ -573,7 +573,9 @@ $(function() {
         $('.companies-popup-container').find('.company-container').hide(0);
         $('.companies-popup-container').find('div[data-company-id="'+$(this).attr('id')+'"]').show(100);
 	var yVal = $(this).position().top - 20;
-	$('.companies-popup-inner').style('margin-top', yVal + 'px');
+	$('.companies-popup-inner').css('margin-top', yVal + 'px');
+	$('.companies-popup-inner').css('margin-left', 'auto');
+	$('.companies-popup-inner').css('margin-right', 'auto');
 	window.scrollTo(0,yVal);
     });
     
