@@ -572,7 +572,9 @@ $(function() {
         $('.companies-popup-container').addClass('active-companies-popup');
         $('.companies-popup-container').find('.company-container').hide(0);
         $('.companies-popup-container').find('div[data-company-id="'+$(this).attr('id')+'"]').show(100);
-	window.scrollTo(0,0);
+	var yVal = $(this).position().top - 20;
+	$('.companies-popup-inner').style('margin-top', yVal + 'px');
+	window.scrollTo(0,yVal);
     });
     
     $('.companies-popup-container').on('click', '.close-companies-popup', function(){
